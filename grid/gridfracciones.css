@@ -1,0 +1,39 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+    height: 500px;
+    width: 70%;
+    color: white;
+    
+}
+.a{
+    background-color: green;
+}
+
+.b{
+    background-color: black;
+}
+
+.c{
+    background-color: green;
+}
+
+.d{
+    background-color: black;
+}
+
+.e{
+    background-color: green;
+}
+
+.f{
+    background-color: black;
+}
+

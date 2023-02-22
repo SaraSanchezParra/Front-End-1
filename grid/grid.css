@@ -1,0 +1,41 @@
+
+/* Reto 1: Medidas absoludas
+Para los retos de hoy trabajaremos, en el repositorio “Maquetación”, desde la rama “dia6”.
+Define esta cuadricula con Grid, usando solo las propiedades de líneas y columnas y medidas absolutas.*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 500px 200px 500px;
+    grid-template-rows: 300px 300px;
+    
+}
+.a{
+    background-color: green;
+}
+
+.b{
+    background-color: orange;
+}
+
+.c{
+    background-color: orangered;
+}
+
+.d{
+    background-color: red;
+}
+
+.e{
+    background-color: blue;
+}
+
+.f{
+    background-color: yellow;
+}
+
+
