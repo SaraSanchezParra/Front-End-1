@@ -1,0 +1,172 @@
+<!-- 1. Maquetar con una tienda online de ropa que se vea exactamente como la de la imagen. Debes usar
+exclusivamente Bootstrap, en ningún caso debe haber un archivo .css vinculado al html. -->
+<!-- Reto 2(parte 2 : Funcionalidad) 2. La tienda debe incluir:
+• Un carrito virtual, donde aparezcan las pendas añadidas. Además este carrito virtual deberá calcular y mostrar el precio total de las prendas añadidas. Este carrito se accionará a través de un botón y se mostrará desde un componente modal.
+La funcionalidad de este ejercicio debe realizarse con JQuery. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda Bootstrap</title>
+    <link rel="icon" type="image/jpg" href="./strass/logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="tiendaRopa.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+       
+        <!-- navegador negro -->
+        <div class="bg-dark">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid bg-dark"> <img src="./strass/logo.png" alt="" width="50px">
+              <!-- <a class="navbar-brand"  style="color:white" href="#">Nash</a> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" style="color:white" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color:white" href="#">Últimas llegadas</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categorías
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Camisetas</a></li>
+                      <li><a class="dropdown-item" href="#">Pantalones y faldas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Vestidos</a></li>
+                    </ul>
+                    </li>
+                    </ul>
+                
+                <form class="d-flex" role="search" >
+                    <button type="button" id="cartButton" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Carrito
+                      </button>
+                  <!-- <button type="button"  class="btn btn-outline-success" style="color:white" type="submit">Carrito</button> -->
+                </form>
+              </div>
+            </div>
+          </nav>
+        
+        </div>
+ 
+
+            <!-- cards imágenes ropa -->
+            <div class="row d-flex justify-content-around mt-5">
+                <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Falda vaquera</h5>
+                      <p class="card-text">20.99€</p>
+                      <button id="button1" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Blusa vaporosa</h5>
+                      <p class="card-text">19.99€</p>
+                      <button id="button2" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pantalón corto</h5>
+                      <p class="card-text">24.99€</p>
+                      <button id="button3" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Vestido</h5>
+                      <p class="card-text">39.99€</p>
+                      <button id="button4" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+
+
+
+            </div>
+
+            <div class="row d-flex justify-content-around mt-5">
+                <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Conjunto traje</h5>
+                      <p class="card-text">51.99€</p>
+                      <button id="button5" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Camiseta rayas</h5>
+                      <p class="card-text">17.99€</p>
+                      <button id="button6" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jersey turquesa</h5>
+                      <p class="card-text">25.99€</p>
+                      <button id="button7" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 13rem;">
+                    <img src="./strass/foto8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Vestido blanco</h5>
+                      <p class="card-text">40.99€</p>
+                      <button id="button8" type="button" class="btn btn-dark">Añadir al carrito</button>
+                    </div>
+                  </div>
+
+
+            </div>
+
+              <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+                   
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>
