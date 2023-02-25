@@ -58,6 +58,7 @@ function showMovies(){
     </div>`
     
     
+    //forma sencilla
     
     // `<div class="card" style="width: 13rem;">
     // //             <img src=${arrayMovies[i].photo} class="card-img-top" alt="...">

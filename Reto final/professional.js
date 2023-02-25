@@ -69,6 +69,7 @@ function showProfessionals(){
            </div>
        </div>`
       
+       //forma sencilla
       
       // `<div class="card" style="width: 13rem;">
       // //             <img src=${arrayProfessionals[i].photo} class="card-img-top" alt="...">
