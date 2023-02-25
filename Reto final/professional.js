@@ -42,35 +42,35 @@ let director2 = new Professional ("Steven Spielberg", 70, 68, 165, false, "Estad
 let arrayProfessionals = [actor1, actor2, actriz3, director, director1, director2];
 
 function showProfessionals(){
-  
-    let professionals = "";
-  
-    for (let i=0; i<arrayProfessionals.length; i++){
-  
-       professionals += `<div class="container d-flex align-items-center justify-content-center flex-wrap">
-       <div class="box">
-           <div class="body">
-               <div class="imgContainer">
-                   <img src=${arrayProfessionals[i].photo} alt="">
-               </div>
-               <div class="content d-flex flex-column align-items-center justify-content-center">
-                   <div>
-                       <h3 class="text-white fs-5">${arrayProfessionals[i].name}</h3>
-                       <p class="fs-6 text-white">Age: ${arrayProfessionals[i].age}</p>
-                       <p class="fs-6 text-white">Weight: ${arrayProfessionals[i].weight}</p>
-                       <p class="fs-6 text-white">Height: ${arrayProfessionals[i].height}</p>
-                       <p class="fs-6 text-white">Is retired?: ${arrayProfessionals[i].isRetired}</p>
-                       <p class="fs-6 text-white">Nationality: ${arrayProfessionals[i].nationality}</p>
-                       <p class="fs-6 text-white">Oscars number: ${arrayProfessionals[i].oscarsNumber}</p>
-                       <p class="fs-6 text-white">Profession: ${arrayProfessionals[i].profession}</p>
 
-                   </div>
-               </div>
-           </div>
-       </div>`
-      
+    let professionals = "";
+
+    for (let i=0; i<arrayProfessionals.length; i++){
+
+        professionals += `<div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div class="box">
+            <div class="body">
+                <div class="imgContainer">
+                    <img src=${arrayProfessionals[i].photo} alt="">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-white fs-5">${arrayProfessionals[i].name}</h3>
+                        <p class="fs-6 text-white">Age: ${arrayProfessionals[i].age}</p>
+                        <p class="fs-6 text-white">Weight: ${arrayProfessionals[i].weight}</p>
+                        <p class="fs-6 text-white">Height: ${arrayProfessionals[i].height}</p>
+                        <p class="fs-6 text-white">Is retired?: ${arrayProfessionals[i].isRetired}</p>
+                        <p class="fs-6 text-white">Nationality: ${arrayProfessionals[i].nationality}</p>
+                        <p class="fs-6 text-white">Oscars number: ${arrayProfessionals[i].oscarsNumber}</p>
+                        <p class="fs-6 text-white">Profession: ${arrayProfessionals[i].profession}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>`
+
        //forma sencilla
-      
+    
       // `<div class="card" style="width: 13rem;">
       // //             <img src=${arrayProfessionals[i].photo} class="card-img-top" alt="...">
       // //             <div class="card-body">
@@ -86,11 +86,11 @@ function showProfessionals(){
       // //             </div>
       // //           </div>`
             
-      } 
-     
-      $('#professionalsCard').append(professionals)
-    }
-     
+    } 
+    
+    $('#professionalsCard').append(professionals)
+}
+
 
 // let writer = new Professional ("Juan Alias", 45, 65, 180, false, "Portuguese", 0, "guionista");
 

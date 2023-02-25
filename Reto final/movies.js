@@ -1,15 +1,14 @@
 
 class Movie{
 
-   
   
     constructor(title, releaseYear, genre, nacionality, photo){
   
-       this.title= title;
-       this.releaseYear = releaseYear;
-       this.nacionality = nacionality
-       this.genre = genre
-       this.photo = photo
+        this.title= title;
+        this.releaseYear = releaseYear;
+        this.nacionality = nacionality
+        this.genre = genre
+        this.photo = photo
   
   
     }
@@ -70,10 +69,10 @@ function showMovies(){
     // //           </div>`
             
     } 
-   
+  
     $('#moviesCard').append(movies)
   }
-   
+  
 
   function addMovies(){
 
